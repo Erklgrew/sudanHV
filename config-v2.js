@@ -10,7 +10,7 @@ var config = {
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: true,
     theme: 'light',
-    projection: 'globe',
+    projection: 'mercator',
     use3dTerrain: true, //set true for enabling 3D maps.
     auto: false,
     title: '',
@@ -132,15 +132,15 @@ var config = {
             id: 'sud-4',
             alignment: 'left',
             hidden: false,
-            title: '',
+            title: 'Mean of daily accumulated precipitation in millimeters (1991-2020)',
             legend: '',
-            image: '',
+            image: 'https://thebulletin.org/wp-content/uploads/2024/03/Mean-daily-precip-legend.png',
           caption: '',
             description: 
 'In the vast regions of Darfur and Kordofan, rainfall is particularly haphazard, so pastoralist communities have relied for generations on mobility for their livestock’s survival.',
           location: {
-                center: [29.76770, 15.50109],
-                zoom: 4,
+                center: [29.76770, 14],
+                zoom: 5,
                 pitch: 0,
                 bearing: 0
             },
@@ -164,15 +164,15 @@ var config = {
             id: 'sud-5',
             alignment: 'left',
             hidden: false,
-            title: '',
+            title: 'Days with maximum average temperature over 40°C (104°F) per year (1991-2020)',
             legend: '',
-            image: '',
+            image: 'https://thebulletin.org/wp-content/uploads/2024/02/Days-over-40-legend.png',
           caption: '',
             description: 
 'Soaring maximum and average temperatures are challenging these well-established transhumance patterns, encouraging them to explore other migration routes and greener pastures for their herds. This adaptation, in turn, risks unsettling the coexistence between people who predominantly derive their income from agro-pastoralism and others who are mostly sedentary farmers.',
           location: {
-                center: [32.53320, 15.57086],
-                zoom: 10,
+                center: [29.76770, 14],
+                zoom: 5,
                 pitch: 0,
                 bearing: 0
             },
@@ -181,13 +181,13 @@ var config = {
             callback: '',
             onChapterEnter: [
                  {
-                     layer: 'fews-may', 
+                     layer: 'days-over-40', 
                      opacity: 1,
                  }
             ],
             onChapterExit: [
                  {
-                     layer: 'fews-may',
+                     layer: 'days-over-40',
                      opacity: 0,
                  }
             ]
@@ -203,7 +203,7 @@ var config = {
             description: 
 'Conflict in these areas has emerged in myriad forms—insurgencies against the government in Khartoum; inter-communitarian clashes between groups armed with increasingly sophisticated weaponry; and <a href="https://ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/resources/docs/SAS-Tubu%20Trouble,%20State%20and%20Statelessness%20in%20the%20Chad-Sudan-Libya%20Triangle.pdf">sprawling criminal rackets</a> involved in the smuggling of livestock, weapons, and much else across the borders with Chad, Libya, and South Sudan.',
           location: {
-                center: [29.76770, 15.50109],
+                center: [29.76770, 14],
                 zoom: 4,
                 pitch: 0,
                 bearing: 0
@@ -213,9 +213,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                  {
-                     layer: 'fews-may', 
-                     opacity: 1,
-                 }
+                     
+                 },
             ],
             onChapterExit: [
                  {
@@ -235,8 +234,8 @@ var config = {
             description: 
 'Since April 2023, many localized conflicts have continued or been subsumed by Sudan’s latest national civil war between the Sudan Armed Forces (SAF) and the paramilitary Rapid Support Forces (RSF), which nominally fall under the SAF hierarchy but whose de facto financial, military, and political autonomy became <a href="https://www.cambridge.org/core/journals/journal-of-modern-african-studies/article/surviving-revolution-and-democratisation-the-sudan-armed-forces-state-fragility-and-security-competition/795745EFAB65FE4AE422AA192F5EBA7E">impossible for the country’s regular army to accept</a>.',
           location: {
-                center: [29.76770, 15.50109],
-                zoom: 4,
+                center: [29.76770, 14],
+                zoom: 5,
                 pitch: 0,
                 bearing: 0
             },
@@ -267,8 +266,8 @@ var config = {
             description: 
 'RSF units and allied militia have predominantly recruited from pastoralist communities in Darfur and Kordofan—establishing themselves as the <a href="https://www.hrw.org/news/2023/11/26/sudan-new-mass-ethnic-killings-pillage-darfur">pre-eminent force in western Sudan</a>, using ethnic cleansing to drive farmers off their land, capturing water holes, and changing in regions where generations of customary authority structures regulated the balance in access to land and pasture between ethno-linguistic groups.',
           location: {
-                center: [29.76770, 15.50109],
-                zoom: 4,
+                center: [29.76770, 14],
+                zoom: 5,
                 pitch: 0,
                 bearing: 0
             },
